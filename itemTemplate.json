@@ -1,0 +1,9 @@
+{
+"name" : "Berry",
+"category" : "Food",
+"type" : "Fruit",
+"damage" : 0,
+"value" : 0.3,
+"weight" : 0.1,
+"description" : "Small red berry."
+}

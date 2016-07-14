@@ -1,0 +1,414 @@
+[
+	{
+		"id" : 1,
+		"name" : "Fighter",
+		"money" : 10,
+		"stats" : {
+			"constitution" : 14,
+			"strength" : 10,
+			"dexterity" : 8,
+			"intelligence" : 5,
+			"fighting" : 13,
+			"ranged" : 9,
+			"arcana" : 2,
+			"woodcutting" : 7
+		},
+		"inventory" : [
+			{
+				"name" : "Broadsword",
+				"category" : "Weapon",
+				"type" : "Melee",
+				"damage" : 3,
+				"value" : 2,
+				"weight" : 1,
+				"description" : "Simple iron broadsword."
+			},
+			{	
+				"name" : "Health Potion",
+				"category" : "Potion",
+				"type" : "Healing",
+				"damage" : 0,
+				"value" : 10,
+				"weight" : 0.3,
+				"description" : "Red potion that heals the user."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			}
+		]
+	},
+	{
+		"id" : 2,
+		"name" : "Ranger",
+		"money" : 12,
+		"stats" : {
+			"constitution" : 12,
+			"strength" : 7,
+			"dexterity" : 11,
+			"intelligence" : 6,
+			"fighting" : 8,
+			"ranged" : 13,
+			"arcana" : 3,
+			"foraging" : 9
+		},
+		"inventory" : [
+			{
+				"name" : "Shortbow",
+				"category" : "Weapon",
+				"type" : "Ranged",
+				"damage" : 3,
+				"value" : 2,
+				"weight" : 0.8,
+				"description" : "Simple wooden bow."
+			},
+			{	
+				"name" : "Health Potion",
+				"category" : "Potion",
+				"type" : "Healing",
+				"damage" : 0,
+				"value" : 10,
+				"weight" : 0.3,
+				"description" : "Red potion that heals the user."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			}
+		]
+	},
+	{
+		"id" : 3,
+		"name" : "Thief",
+		"money" : 7,
+		"stats" : {
+			"constitution" : 9,
+			"strength" : 8,
+			"dexterity" : 12,
+			"intelligence" : 8,
+			"fighting" : 10,
+			"ranged" : 9,
+			"arcana" : 1,
+			"stealth" : 6,
+			"pickpocketing" : 13
+		},
+		"inventory" : [
+			{
+				"name" : "Dagger",
+				"category" : "Weapon",
+				"type" : "Melee",
+				"damage" : 2,
+				"value" : 1,
+				"weight" : 0.5,
+				"description" : "Simple iron dagger."
+			},
+			{	
+				"name" : "Health Potion",
+				"category" : "Potion",
+				"type" : "Healing",
+				"damage" : 0,
+				"value" : 10,
+				"weight" : 0.3,
+				"description" : "Red potion that heals the user."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			}
+		]
+	},
+	{
+		"id" : 4,
+		"name" : "Wizard",
+		"money" : 30,
+		"stats" : {
+			"constitution" : 8,
+			"strength" : 5,
+			"dexterity" : 8,
+			"intelligence" : 13,
+			"fighting" : 5,
+			"ranged" : 9,
+			"arcana" : 14
+		},
+		"inventory" : [
+			{
+				"name" : "Wooden Staff",
+				"category" : "Weapon",
+				"type" : "Magic",
+				"damage" : 3,
+				"value" : 2,
+				"weight" : 1,
+				"description" : "Simple magical staff."
+			},
+			{	
+				"name" : "Health Potion",
+				"category" : "Potion",
+				"type" : "Healing",
+				"damage" : 0,
+				"value" : 10,
+				"weight" : 0.3,
+				"description" : "Red potion that heals the user."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			}
+		]
+	},
+	{
+		"id" : 5,
+		"name" : "Labourer",
+		"money" : 50,
+		"stats" : {
+			"constitution" : 7,
+			"strength" : 15,
+			"dexterity" : 8,
+			"intelligence" : 6,
+			"fighting" : 6,
+			"ranged" : 6,
+			"arcana" : 1,
+			"foraging" : 12,
+			"woodcutting" : 10,
+			"fishing" : 11
+		},
+		"inventory" : [
+			{
+				"name" : "Woodcutting Axe",
+				"category" : "Tool",
+				"type" : "Woodcutting",
+				"damage" : 0,
+				"value" : 1,
+				"weight" : 1,
+				"description" : "Axe commonly used to fell trees."
+			},
+			{
+				"name" : "Fishing Rod",
+				"category" : "Tool",
+				"type" : "Fishing",
+				"damage" : 0,
+				"value" : 2,
+				"weight" : 1,
+				"description" : "Simple wooden rod."
+			},
+			{	
+				"name" : "Health Potion",
+				"category" : "Potion",
+				"type" : "Healing",
+				"damage" : 0,
+				"value" : 10,
+				"weight" : 0.3,
+				"description" : "Red potion that heals the user."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			}
+		]
+	},
+	{
+		"id" : 6,
+		"name" : "Peasant",
+		"money" : 10,
+		"stats" : {
+			"constitution" : 1,
+			"strength" : 1,
+			"dexterity" : 1,
+			"intelligence" : 1,
+			"fighting" : 1,
+			"ranged" : 1,
+			"arcana" : 1,
+			"foraging" : 1,
+			"woodcutting" : 1,
+			"fishing" : 1
+		},
+		"inventory" : [
+			{	
+				"name" : "Health Potion",
+				"category" : "Potion",
+				"type" : "Healing",
+				"damage" : 0,
+				"value" : 10,
+				"weight" : 0.3,
+				"description" : "Red potion that heals the user."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			},
+			{	
+				"name" : "Ration",
+				"category" : "Food",
+				"type" : "Cardboard",
+				"damage" : 0,
+				"value" : 5,
+				"weight" : 0.3,
+				"description" : "It is food, but not particularly tasty."
+			}
+		]
+	}
+]

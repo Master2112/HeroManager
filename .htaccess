@@ -1,0 +1,44 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	
+	RewriteRule ^heroes/?$ getHero.php [QSA]
+	RewriteRule ^heroes\.(xml|json)$ getHero.php?type=$1 [QSA]
+	
+	RewriteRule ^heroes/([0-9]+)/?$ getHero.php?id=$1&type=json [QSA]
+	RewriteRule ^heroes/([0-9]+)\.(xml|json)$ getHero.php?id=$1&type=$2 [QSA]
+	
+	RewriteRule ^users/?$ getUser.php [QSA]
+	RewriteRule ^users\.(xml|json)$ getUser.php?type=$1 [QSA]
+	
+	RewriteRule ^users/([0-9]+)/?$ getUser.php?id=$1&type=json [QSA]
+	RewriteRule ^users/([0-9]+)\.(xml|json)$ getUser.php?id=$1&type=$2 [QSA]
+	
+	RewriteRule ^locations/?$ getLocation.php [QSA]
+	RewriteRule ^locations\.(xml|json)$ getLocation.php?type=$1 [QSA]
+	
+	RewriteRule ^locations/([0-9]+)/?$ getLocation.php?id=$1&type=json [QSA]
+	RewriteRule ^locations/([0-9]+)\.(xml|json)$ getLocation.php?id=$1&type=$2 [QSA]
+	
+	RewriteRule ^command/?$ commandHero.php
+	RewriteRule ^shop/?$ commandTransaction.php
+	RewriteRule ^getkey/?$ getUserKey.php
+	
+	RewriteRule ^heroes/raw/?$ getHero.php?raw=true [QSA]
+	RewriteRule ^heroes/raw\.(xml|json)$ getHero.php?type=$1&raw=true [QSA]
+	
+	RewriteRule ^heroes/raw/([0-9]+)/?$ getHero.php?id=$1&type=json&raw=true [QSA]
+	RewriteRule ^heroes/raw/([0-9]+)\.(xml|json)$ getHero.php?id=$1&type=$2&raw=true [QSA]
+	
+	RewriteRule ^users/raw/?$ getUser.php?raw=true [QSA]
+	RewriteRule ^users/raw\.(xml|json)$ getUser.php?type=$1&raw=true [QSA]
+	
+	RewriteRule ^users/raw/([0-9]+)/?$ getUser.php?id=$1&type=json&raw=true [QSA]
+	RewriteRule ^users/raw/([0-9]+)\.(xml|json)$ getUser.php?id=$1&type=$2&raw=true [QSA]
+	
+	RewriteRule ^locations/raw/?$ getLocation.php?raw=true [QSA]
+	RewriteRule ^locations/raw\.(xml|json)$ getLocation.php?type=$1&raw=true [QSA]
+	
+	RewriteRule ^locations/raw/([0-9]+)/?$ getLocation.php?id=$1&type=json&raw=true [QSA]
+	RewriteRule ^locations/raw/([0-9]+)\.(xml|json)$ getLocation.php?id=$1&type=$2&raw=true [QSA]
+	
+</IfModule>
