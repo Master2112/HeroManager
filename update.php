@@ -456,7 +456,7 @@ function Fight($hero, $location, $maxEnemies)
 			
 			if($animal->health <= 0)
 			{
-				$hero = WriteHeroLog($hero, "I defeated the " . $animal->name . " using my " . $heroWeapon->name . ", but took " . $lostHp . " damage in the process.");
+				$hero = WriteHeroLog($hero, "I defeated the " . $animal->name . " using my " . $heroWeapon->name . ($lostHp > 0? ", but took " . $lostHp . " damage in the process." : "."));
 				$hero = AddItem($hero, MakeItem($animal->drops->name, $animal->drops->category, $animal->drops->type, $animal->drops->damage, $animal->drops->value, $animal->drops->weight, $animal->drops->description));
 			}
 		}
