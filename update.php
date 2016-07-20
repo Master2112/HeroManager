@@ -434,7 +434,7 @@ function Fight($hero, $location, $maxEnemies)
 				if($animal->health > 0)
 				{
 					$hero->currentHealth -= $animal->damage;
-					$lostHp += $animal.damage;
+					$lostHp += $animal->damage;
 				}				
 				
 				if($hero->currentHealth <= 0)
