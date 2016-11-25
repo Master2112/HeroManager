@@ -11,6 +11,18 @@ HeroManager = {
 			}
 		);
 	},
+	CreateHero: function(userId, name, classId, key)
+	{
+		$.post
+		(
+			"http://timfalken.com/heromanager/createhero",
+			'{"ownerId":"' + userId + '", "name":"' + name + '", "classId":"' + classId + ', "key":"' + key + '"}',
+			function(data) 
+			{
+			  console.log(data);
+			}
+		);
+	},
 	GetUserKey: function(userEmail, userPassword)
 	{
 		$.post
