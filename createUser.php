@@ -24,7 +24,7 @@ if ($valid)
     {
         echo '{"error":"User with this email already exists."}';
 
-        $valid = false;
+        die;
     }
 
     if ($valid)

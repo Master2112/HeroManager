@@ -16,7 +16,7 @@ HeroManager = {
 		$.post
 		(
 			"http://timfalken.com/heromanager/createhero",
-			'{"ownerId":"' + userId + '", "name":"' + name + '", "classId":"' + classId + ', "key":"' + key + '"}',
+			'{"ownerId":"' + userId + '", "name":"' + name + '", "classId":"' + classId + '", "key":"' + key + '"}',
 			function(data) 
 			{
 			  console.log(data);
