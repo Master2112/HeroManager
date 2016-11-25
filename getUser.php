@@ -149,6 +149,11 @@ function FixUserForPublic($userRaw)
 		
 		$stats = json_decode($userHeroes[$i]->stats);
 		
+		if (!isset($stats->age))
+		{
+			$stats->age = 1;
+		}
+
 		$hero->age = $stats->age;
 		
 		$hero->link = "http://timfalken.com/heromanager/heroes/" . $userHeroes[$i]->id;

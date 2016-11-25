@@ -79,6 +79,8 @@ function CreateHeroFromData($db, $data)
         echo '{"error":"Invalid classID"}';
         return false;
     }
+
+    $heroClass->stats->age = 1;
     
     $health = 18 + ($heroClass->stats->constitution * 2);
 
