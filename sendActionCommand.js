@@ -1,4 +1,16 @@
 HeroManager = {	
+	CreateUser: function(userName, userEmail, userPassword)
+	{
+		$.post
+		(
+			"http://timfalken.com/heromanager/createuser",
+			'{"name":"' + userName + '", "email":"' + userEmail + '", "password":"' + userPassword + '"}',
+			function(data) 
+			{
+			  console.log(data);
+			}
+		);
+	},
 	GetUserKey: function(userEmail, userPassword)
 	{
 		$.post

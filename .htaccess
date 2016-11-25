@@ -22,6 +22,9 @@
 	RewriteRule ^command/?$ commandHero.php
 	RewriteRule ^shop/?$ commandTransaction.php
 	RewriteRule ^getkey/?$ getUserKey.php
+
+	RewriteRule ^createuser/?$ createUser.php
+	RewriteRule ^createhero/?$ createHero.php
 	
 	RewriteRule ^heroes/raw/?$ getHero.php?raw=true [QSA]
 	RewriteRule ^heroes/raw\.(xml|json)$ getHero.php?type=$1&raw=true [QSA]
