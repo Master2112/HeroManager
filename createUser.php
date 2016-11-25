@@ -29,7 +29,7 @@ if ($valid)
 
     if ($valid)
     {
-        $users->Insert([$data->name, $data->email, $data->password, 1]);
+        $users->Create([$data->name, $data->email, $data->password, 1]);
 
         echo '{"success":"Useraccount successfully created!"}';
     }
