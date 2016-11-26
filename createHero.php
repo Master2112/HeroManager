@@ -34,7 +34,15 @@ if ($valid)
     {
         $userHeroes = $heroes->Where("`ownerId`='" . $existingUser->id . "'");
 
-        $emptyHeroSlots = $existingUser->level - count($userHeroes);
+        $livingHeroes = [];
+
+        for ($i = 0; $i < count($userHeroes); $i++)
+        {
+            if($userHeroes[$i]->alive == 1)
+                array_push($livingHeroes, $userHeroes[$i]);
+        }
+
+        $emptyHeroSlots = $existingUser->level - count($livingHeroes);
 
         if ($emptyHeroSlots <= 0)
         {
