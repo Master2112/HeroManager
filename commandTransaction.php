@@ -43,6 +43,7 @@ if(isset($data->id))
 						{
 							$hero->inventory = json_decode($hero->inventory);//open
 							$hero->log = json_decode($hero->log);
+							$hero->stats = json_decode($hero->stats);
 							
 							$today = new DateTime();
 							$hero->todayDate = $today->format("Y-m-d");
@@ -80,8 +81,9 @@ if(isset($data->id))
 							{
 								$hero->inventory = json_encode($hero->inventory); //close
 								$hero->log = json_encode($hero->log);
+								$hero->stats = json_encode($hero->stats);
 								
-								$heroes->Edit($hero->id, [$hero->ownerId, $hero->name, $hero->stats, $hero->inventory, $hero->currentHealth, $hero->maxHealth, $hero->locationId, $hero->lastUpdate, $hero->alive, $hero->currentAction, $hero->money, $hero->log]);
+								$heroes->Edit($hero->id, [$hero->ownerId, $hero->name, $hero->stats, $hero->inventory, $hero->currentHealth, $hero->maxHealth, $hero->locationId, $hero->lastUpdate, $hero->alive, $hero->currentAction, $hero->money, $hero->log, $hero->level, $hero->levelProgress]);
 								echo '{"success":"Transaction applied successfully."}';
 							}
 						}
@@ -171,6 +173,8 @@ function BuyItem($hero, $itemId)
 		{
 			$price = $shop[$h]->value;
 			
+			$totalWeight = 0;
+
 			for($i = 0; $i < count($hero->inventory); $i++)
 				$totalWeight += $hero->inventory[$i]->weight;
 			

@@ -750,6 +750,15 @@ for($i = 0; $i < count($allHeroes); $i++)
 				
 				if($allHeroes[$i]->currentHealth <= 0)
 				{
+					$user = $users->GetRow($allHeroes[$i]->ownerId);
+
+					if ($allHeroes[$i]->level > $user->level)
+					{
+						$user->level ++;
+
+						$users->Edit($user->userName, $user->email, $user->password, $user->level);
+					}
+
 					WriteHeroLog($allHeroes[$i], "I have died.");
 					$allHeroes[$i]->alive = false;
 					$allHeroes[$i]->currentHealth = 0;
@@ -770,6 +779,8 @@ for($i = 0; $i < count($allHeroes); $i++)
 		}
 		
 		$allHeroes[$i]->log = $newHist;
+
+		$allHeroes[$i] = CalculateHeroLevel($allHeroes[$i]);
 		
 		$allHeroes[$i]->stats = json_encode($allHeroes[$i]->stats);
 		$allHeroes[$i]->inventory = json_encode($allHeroes[$i]->inventory);
@@ -778,9 +789,39 @@ for($i = 0; $i < count($allHeroes); $i++)
 	}
 }
 
+function CalculateHeroLevel($hero)
+{
+	$level = 1;
+	$statPointsNeededPerLevel = 5;
+	$statPoints = -50; // base amount
+
+	$levelUpMultiplier = 1.1;
+
+	foreach ($hero->stats as $key => $value) 
+	{
+		if ($key <> "age")
+		{
+			$statPoints += $value;
+
+			while ($statPoints >= $statPointsNeededPerLevel)
+			{
+				$statPoints -= $statPointsNeededPerLevel;
+				$level ++;
+
+				$statPointsNeededPerLevel *= $levelUpMultiplier;
+			}
+		}
+	}
+
+	$hero->level = $level;
+	$hero->levelProgress = $statPoints / $statPointsNeededPerLevel;
+
+	return $hero;
+}
+
 function SaveHero($hero, $db)
 {
-	$db->Edit($hero->id, [$hero->ownerId, $hero->name, $hero->stats, $hero->inventory, $hero->currentHealth, $hero->maxHealth, $hero->locationId, $hero->lastUpdate, $hero->alive, $hero->currentAction, $hero->money, $hero->log]);
+	$db->Edit($hero->id, [$hero->ownerId, $hero->name, $hero->stats, $hero->inventory, $hero->currentHealth, $hero->maxHealth, $hero->locationId, $hero->lastUpdate, $hero->alive, $hero->currentAction, $hero->money, $hero->log, $hero->level, $hero->levelProgress]);
 }
 
 function GetMaxWeight($hero)
@@ -788,7 +829,7 @@ function GetMaxWeight($hero)
 	if(!isset($hero->stats->strength))
 		$hero->stats->strength = 1;
 		
-	return min(10 + floor($hero->stats->strength * 0.2), 30);
+	return min(10 + floor($hero->stats->strength * 0.5), 30);
 }
 
 function MakeItem($name, $category, $type, $damage, $value, $weight, $description)
