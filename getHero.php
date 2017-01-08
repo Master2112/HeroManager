@@ -53,7 +53,14 @@ else
 {
 	$heroesFixed = [];
 	
-	$all = $heroes->All();
+	if(isset($_GET["userId"]) && $_GET["userId"] <> '')
+	{
+		$all = $heroes->Where('`ownerId`=' . $_GET["userId"]);
+	}
+	else
+	{
+		$all = $heroes->All();
+	}
 	
 	for($i = 0; $i < count($all); $i++)
 	{

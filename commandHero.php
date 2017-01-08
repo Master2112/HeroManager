@@ -52,7 +52,7 @@ if(isset($data->id))
 				{
 					if($data->key == $user->password)
 					{
-						$heroes->Edit($hero->id, [$hero->ownerId, $hero->name, $hero->stats, $hero->inventory, $hero->currentHealth, $hero->maxHealth, $hero->locationId, $hero->lastUpdate, $hero->alive, $data->action, $hero->money, $hero->log]);
+						$heroes->Edit($hero->id, [$hero->ownerId, $hero->name, $hero->stats, $hero->inventory, $hero->currentHealth, $hero->maxHealth, $hero->locationId, $hero->lastUpdate, $hero->alive, $data->action, $hero->money, $hero->log, $hero->level, $hero->levelProgress]);
 						echo '{"success":"Action applied successfully."}';
 					}
 					else

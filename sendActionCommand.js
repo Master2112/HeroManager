@@ -1,5 +1,5 @@
 HeroManager = {	
-	CreateUser: function(userName, userEmail, userPassword)
+	CreateUser: function(userName, userEmail, userPassword, callback, context)
 	{
 		$.post
 		(
@@ -8,10 +8,12 @@ HeroManager = {
 			function(data) 
 			{
 			  console.log(data);
+
+				callback && callback.call(context, data);
 			}
 		);
 	},
-	CreateHero: function(userId, name, classId, key)
+	CreateHero: function(userId, name, classId, key, callback, context)
 	{
 		$.post
 		(
@@ -20,10 +22,12 @@ HeroManager = {
 			function(data) 
 			{
 			  console.log(data);
+
+				callback && callback.call(context, data);
 			}
 		);
 	},
-	GetUserKey: function(userEmail, userPassword)
+	GetUserKey: function(userEmail, userPassword, callback, context)
 	{
 		$.post
 		(
@@ -32,10 +36,12 @@ HeroManager = {
 			function(data) 
 			{
 			  console.log(data);
+
+				callback && callback.call(context, data);
 			}
 		);
 	},
-	CommandHero: function(heroId, action, key)
+	CommandHero: function(heroId, action, key, callback, context)
 	{
 		$.post
 		(
@@ -44,11 +50,13 @@ HeroManager = {
 			function(data) 
 			{
 			  console.log(data);
+
+				callback && callback.call(context, data);
 			}
 		);
 	},
 
-	SellHeroItem: function(heroId, itemId, key)
+	SellHeroItem: function(heroId, itemId, key, callback, context)
 	{
 		$.post
 		(
@@ -57,11 +65,13 @@ HeroManager = {
 			function(data) 
 			{
 			  console.log(data);
+
+				callback && callback.call(context, data);
 			}
 		);
 	},
 
-	BuyShopItem: function(heroId, shopItemId, key)
+	BuyShopItem: function(heroId, shopItemId, key, callback, context)
 	{
 		$.post
 		(
@@ -70,6 +80,8 @@ HeroManager = {
 			function(data) 
 			{
 			  console.log(data);
+
+				callback && callback.call(context, data);
 			}
 		);
 	}

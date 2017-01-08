@@ -16,6 +16,8 @@ if (!isset($data->email))
 if (!isset($data->password))
     $valid = false;
 
+$data->email = strtolower($data->email);
+
 if ($valid)
 {
     $existingUser = $users->Where("`email`='" . $data->email . "'");
@@ -29,7 +31,7 @@ if ($valid)
 
     if ($valid)
     {
-        $users->Create([$data->name, $data->email, $data->password, 1]);
+        $users->Create([$data->name, $data->email, md5($data->password), 1]);
 
         echo '{"success":"Useraccount successfully created!"}';
     }

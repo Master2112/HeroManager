@@ -7,13 +7,13 @@ $data = json_decode($data);
 
 $valid = true;
 
-if (!isset($data->ownerId))
+if (!isset($data->ownerId) || $data->ownerId == "")
     $valid = false;
 
-if (!isset($data->name))
+if (!isset($data->name) || $data->name == "")
     $valid = false;
 
-if (!isset($data->classId))
+if (!isset($data->classId) || $data->classId == "")
     $valid = false;
 
 if (!isset($data->key))
@@ -95,7 +95,7 @@ function CreateHeroFromData($db, $data)
     $datetime1 = new DateTime();
     $date = $datetime1->format("Y-m-d");
     
-    $db->Create([$data->ownerId, $data->name, json_encode($heroClass->stats), json_encode($heroClass->inventory), $health, $health, 1, $date, true, "Idle", $heroClass->money, "[]"]);
+    $db->Create([$data->ownerId, $data->name, json_encode($heroClass->stats), json_encode($heroClass->inventory), $health, $health, 1, $date, true, "Idle", $heroClass->money, "[]", 1, 0]);
 
     return true;
 }

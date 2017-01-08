@@ -7,7 +7,7 @@ $data = json_decode($data);
 
 if(isset($data->email))
 {
-	$user = $users->Where("`email`='" . $data->email . "'")[0];
+	$user = $users->Where("`email`='" . strtolower($data->email) . "'")[0];
 	
 	if($user != null)
 	{			
